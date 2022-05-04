@@ -272,8 +272,10 @@ if __name__ == '__main__':
   if activityname != "all":
     activityid = translate_activity(activities, activityname=activityname)
     entries = parse_entries(entries, activityid)
-
-  entries = parse_entries(entries)
+  else:
+    entries = parse_entries(entries)
+  
 
   export_times(entries, filename, activities)
-
+  
+  
